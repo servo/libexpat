@@ -1,0 +1,4 @@
+#!/bin/sh
+
+./buildconf.sh --host=arm-linux-androideabi
+./configure --host=arm-linux-androideabi && make
