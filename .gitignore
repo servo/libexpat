@@ -1,0 +1,9 @@
+expat/aclocal.m4
+expat/configure
+expat/conftools/config.guess
+expat/conftools/config.sub
+expat/conftools/install-sh
+expat/conftools/ltmain.sh
+expat/expat_config.h.in
+expat/m4/
+expat/expat_config.h.in~
