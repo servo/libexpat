@@ -1,0 +1,10 @@
+[package]
+name = "expat-sys"
+version = "2.1.0"
+authors = ["Expat maintainers"]
+
+build = "make -f makefile.cargo"
+
+[lib]
+name = "expat-sys"
+path = "lib.rs"
