@@ -3,7 +3,7 @@ name = "expat-sys"
 version = "2.1.0"
 authors = ["Expat maintainers"]
 
-build = "make -f makefile.cargo"
+build = "build.rs"
 
 [lib]
 name = "expat-sys"
