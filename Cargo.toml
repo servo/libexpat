@@ -6,5 +6,5 @@ authors = ["Expat maintainers"]
 build = "build.rs"
 
 [lib]
-name = "expat-sys"
+name = "expat_sys"
 path = "lib.rs"
