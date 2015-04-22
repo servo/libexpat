@@ -19,6 +19,7 @@ else
 
 .PHONY: all
 all:
+	mkdir $(OUT_DIR)/include
 
 endif
 
