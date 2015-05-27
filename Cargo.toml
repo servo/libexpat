@@ -2,7 +2,7 @@
 name = "expat-sys"
 version = "2.1.0"
 authors = ["Expat maintainers"]
-
+links = "expat"
 build = "build.rs"
 
 [lib]
