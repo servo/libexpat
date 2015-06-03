@@ -12,7 +12,7 @@ all:
 	cd $(OUT_DIR) && $(SRC_DIR)/expat/configure $(CONFIGURE_FLAGS)
 	cd $(OUT_DIR) && make -j4
 	cp $(OUT_DIR)/.libs/libexpat.a $(OUT_DIR)
-	mkdir $(OUT_DIR)/include
+	mkdir -p $(OUT_DIR)/include
 	cp expat/lib/expat.h expat/lib/expat_external.h $(OUT_DIR)/include
 
 else
