@@ -3,10 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 extern crate pkg_config;
+extern crate make_cmd;
 
-use std::process::Command;
 use std::env;
-
 
 fn main() {
     if pkg_config::Config::new().atleast_version("2.1.0").find("expat").is_ok()
@@ -14,7 +13,7 @@ fn main() {
         return;
     }
 
-    assert!(Command::new("make")
+    assert!(make_cmd::make()
         .args(&["-f", "makefile.cargo"])
         .status()
         .unwrap()
