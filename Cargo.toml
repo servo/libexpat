@@ -4,6 +4,11 @@ version = "2.1.0"
 authors = ["Expat maintainers"]
 links = "expat"
 build = "build.rs"
+repository = "https://github.com/servo/libexpat/"
+license = "MIT"
+description = "XML parser library written in C"
+homepage = "http://www.libexpat.org/"
+
 
 [lib]
 name = "expat_sys"
@@ -11,4 +16,4 @@ path = "lib.rs"
 
 [build-dependencies]
 pkg-config = "0.3"
-make-cmd = "*"
+make-cmd = "0.1"
