@@ -15,5 +15,5 @@ name = "expat_sys"
 path = "lib.rs"
 
 [build-dependencies]
+cmake = "0.1"
 pkg-config = "0.3"
-make-cmd = "0.1"
