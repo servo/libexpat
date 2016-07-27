@@ -14,6 +14,9 @@ fn main() {
 
     let mut dst = cmake::Config::new("expat")
         .define("BUILD_shared", "OFF")
+        .define("BUILD_tools", "OFF")
+        .define("BUILD_examples", "OFF")
+        .define("BUILD_tests", "OFF")
         .build();
     dst.push("lib");
     println!("cargo:rustc-link-search=native={}", dst.display());
