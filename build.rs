@@ -8,8 +8,14 @@ extern crate pkg_config;
 use std::env;
 
 fn main() {
-    if pkg_config::Config::new().atleast_version("2.1.0").find("expat").is_ok() {
-        return
+    let target = env::var("TARGET").unwrap();
+    if !target.contains("android")
+        && pkg_config::Config::new()
+            .atleast_version("2.1.0")
+            .find("expat")
+            .is_ok()
+    {
+        return;
     }
 
     let mut dst = cmake::Config::new("expat")
