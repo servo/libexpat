@@ -1,14 +1,14 @@
-%define version 2.1.0
+%define version 2.2.7
 %define release 1
 
 Summary: Expat is an XML 1.0 parser written in C.
 Name: expat
 Version: %{version}
 Release: %{release}
-Copyright: MIT/X
+License: MIT/X
 Group: Utilities/parsers
 URL: http://www.libexpat.org/
-Source: http://download.sourceforge.net/expat/expat-%{version}.tar.gz
+Source: https://downloads.sourceforge.net/project/expat/expat/%{version}/expat-%{version}.tar.bz2
 BuildRoot: /var/tmp/%{name}-buildroot
 
 %description
@@ -27,18 +27,57 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 mkdir -p $RPM_BUILD_ROOT/usr/lib
 mkdir -p $RPM_BUILD_ROOT/usr/include
-make install prefix=$RPM_BUILD_ROOT/usr
+make install DESTDIR=$RPM_BUILD_ROOT prefix=/usr
 install -D xmlwf/xmlwf $RPM_BUILD_ROOT/usr/bin/xmlwf
 
 %files
-%doc COPYING Changes MANIFEST README doc/reference.html doc/style.css doc/*.png
+%doc COPYING README.md doc/reference.html doc/style.css doc/*.png
 /usr/bin/xmlwf
 /usr/lib
 /usr/include/expat.h
+/usr/include/expat_config.h
 /usr/include/expat_external.h
-/usr/man/man1/xmlwf.1.gz
+/usr/share/doc/expat/AUTHORS
+/usr/share/doc/expat/changelog
+/usr/share/man/man1/xmlwf.1.gz
 
 %changelog
+* Wed Jun 19 2019 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.7-1]
+- Update for the 2.2.7 release.
+
+* Sun Aug 12 2018 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.6-1]
+- Update for the 2.2.6 release.
+
+* Tue Oct 31 2017 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.5-1]
+- Update for the 2.2.5 release.
+
+* Sat Aug 19 2017 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.4-1]
+- Update for the 2.2.4 release.
+
+* Wed Aug 2 2017 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.3-1]
+- Update for the 2.2.3 release.
+
+* Wed Jul 12 2017 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.2-1]
+- Update for the 2.2.2 release.
+
+* Sat Jun 17 2017 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.1-1]
+- Update for the 2.2.1 release.
+
+* Tue Jun 21 2016 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.2.0-1]
+- Update for the 2.2.0 release.
+
+* Wed Mar 2 2016 Sebastian Pipping <sebastian@pipping.org>
+[Release 2.1.1-1]
+- Update for the 2.1.1 release.
+
 * Sat Mar 3 2012 Karl Waclawek <karl@waclawek.net>
 [Release 2.1.0-1]
 - Update for the 2.1.0 release.

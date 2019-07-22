@@ -1,6 +1,6 @@
 [package]
 name = "expat-sys"
-version = "2.1.6"
+version = "2.2.7"
 authors = ["Expat maintainers"]
 links = "expat"
 build = "build.rs"
