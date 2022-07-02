@@ -40,6 +40,7 @@ fn main() {
     };
 
     let mut dst = cfg
+        .define("CMAKE_INSTALL_LIBDIR", "lib")
         .define("BUILD_shared", "OFF")
         .define("BUILD_tools", "OFF")
         .define("BUILD_examples", "OFF")
